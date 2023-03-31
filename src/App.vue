@@ -1,27 +1,56 @@
 <template>
   <div id="app">
     <div id="nav">
+
       <router-link :to="{ name: 'EventList' }">Events</router-link> |
       <router-link :to="{ name: 'About' }">About</router-link>
       |
       <router-link :to="{ name: 'EventCreate' }">Create Event</router-link>
     </div>
 
+    <div v-if="notice">
+      <NoticeBoard @button-clicked="close"  notice="We are closed!" />
+    </div>
+
     <p>Logged as {{ userStore.user }}</p>
      <p>First name: {{ userStore.firstName }}</p>
+
+     <!-- <BaseInput type="text" v-model="name" placeholder="Enter your username" /> -->
+
     <router-view />
   </div>
 </template>
 
 <script>
 import { useUserStore } from './stores/UserStore'
+import BaseInput from './components/BaseInput.vue'
+import NoticeBoard from './components/NoticeBoard.vue'
+
 export default {
+  
   setup() {
     const userStore = useUserStore()
     return {
       userStore
     }
-  }
+  },
+  components: {
+    BaseInput,
+    NoticeBoard
+  },
+  data(){
+    return{
+      name:'',
+      notice:true
+    }
+  },
+  methods:{
+    close(){
+      this.notice = false;
+    }
+  },
+
+
 }
 </script>
 
