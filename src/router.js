@@ -4,7 +4,7 @@ import EventDetails from './views/EventDetails.vue'
 import EventCreate from './views/EventCreate.vue'
 import ErrorDisplay from './views/ErrorDisplay.vue'
 import About from './views/About.vue'
-
+import Component from './views/Component.vue'
 const routes = [
   {
     path: '/',
@@ -26,6 +26,11 @@ const routes = [
     path: '/about',
     name: 'About',
     component: About
+  },
+  {
+    path: '/component',
+    name: 'Component',
+    component: Component
   },
   {
     path: '/error/:error',
