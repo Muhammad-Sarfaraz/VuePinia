@@ -4,6 +4,7 @@ export const useUserStore = defineStore('UserStore',{
     state (){
         return{
             user: 'Sarfaraz',
+            avatar:'https://nvm-boilerplate.chrislee.kr/frontend-nuxt/_nuxt/img/icon.6de3ceb.png'
         }
     },
     getters:{
