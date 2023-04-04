@@ -17,6 +17,10 @@
 
      <!-- <BaseInput type="text" v-model="name" placeholder="Enter your username" /> -->
 
+     <input ref="auth" type="text" value="ok" >
+
+     <button @click="load">Load</button>
+
     <router-view />
   </div>
 </template>
@@ -44,9 +48,21 @@ export default {
       notice:true
     }
   },
+  provide(){
+    return{
+      key:'Key'
+    }
+  },
+  watch:{
+
+  },
   methods:{
     close(){
       this.notice = false;
+    },
+    load(){
+     
+      console.log( this.$refs.auth.value)
     }
   },
 
