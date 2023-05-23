@@ -7,7 +7,7 @@
 
 # Vue Pinia
 
-# Local Setup Instructions
+# Local Setup Instruction
 
 ```sh
 # Install dependencies
