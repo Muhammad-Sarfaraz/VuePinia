@@ -2,12 +2,9 @@
   <img src="https://pinia.vuejs.org/logo.svg">
 </p>
 
-
-
-
 # Vue Pinia
 
-# Local Setup Instruction
+# Setup Instruction
 
 ```sh
 # Install dependencies
